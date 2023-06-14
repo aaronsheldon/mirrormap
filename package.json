@@ -1,0 +1,24 @@
+{
+  "name": "@aaronsheldon/mirrormap",
+  "version": "0.0.1",
+  "description": "Doubly linked Maps, using only native JavaScript constructs. MirrorMap extends Map to implement reciprocal reflection between keys and values.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "map",
+    "hash",
+    "key",
+    "value",
+    "store",
+    "index",
+    "search"
+  ],
+  "author": "Aaron Sheldon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaronsheldon/mirrormap"
+  }
+}
