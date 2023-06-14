@@ -131,15 +131,15 @@ module.exports = class MirrorMap extends Map {
         const ks = this.get(value);
 
         // Remove
-        vs.delete(value)
-        ks.delete(key);
+        const rv = vs.delete(value);
+        const rk = ks.delete(key);
 
         // Clean up
         if (vs.size < 1) { super.delete(key); }
         if (ks.size < 1) { super.delete(value); }
 
         // Send
-        return true;
+        return rv && rk;
     }
 
     // Helper method to create self-references
@@ -171,12 +171,12 @@ module.exports = class MirrorMap extends Map {
         const vs = this.get(key);
 
         // Remove
-        const result = vs.delete(key);
+        const r = vs.delete(key);
 
         // Clean up
         if (vs.size < 1) { super.delete(key); }
 
         // Send
-        return result;
+        return r;
     }
 }
